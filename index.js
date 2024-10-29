@@ -1,4 +1,4 @@
-import { ListBucketsCommand, S3Client } from "@aws-sdk/client-s3";
+import { S3Client } from "@aws-sdk/client-s3";
 import dotenv from "dotenv";
 import multer from "multer";
 import multerS3 from "multer-s3";
@@ -14,15 +14,6 @@ const s3Client = new S3Client({
         secretAccessKey: process.env.S3_SPACES_SECRET,
     },
 });
-
-(async () => {
-    try {
-        const response = await s3Client.send(new ListBucketsCommand({}));
-        console.log("Available Buckets:", response.Buckets);
-    } catch (error) {
-        console.error("Error listing buckets:", error);
-    }
-})();
 
 const BUCKET_NAME = process.env.S3_BUCKET_NAME;
 

@@ -1,14 +1,25 @@
 {
   "name": "controller-sets-s3-file-upload",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "main": "index.js",
+  "description": "This middleware is designed to reduce extra code for Node/Express.js developers, making it easy to handle S3 file uploads.",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ONE ISLAM",
   "license": "ISC",
-  "description": "",
+  
   "dependencies": {
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oneislam/controller-sets-s3-fileupload"
+  },
+  "keywords": [
+    "s3",
+    "multer",
+    "multer-s3",
+    "file upload"
+  ]
 }
