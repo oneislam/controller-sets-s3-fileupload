@@ -1,0 +1,14 @@
+{
+  "name": "controller-sets-s3-file-upload",
+  "version": "1.0.1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ONE ISLAM",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+  }
+}
