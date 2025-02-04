@@ -1,13 +1,28 @@
-# controllerSets
+# ONE ISLAM
+
+[oneislam](https://oneislam.pro/) is an IT company founded to connect humanity with Islam and usher in a `new era of halal platforms for Muslims`.
+
+# controller set s3 file upload
 
 [controller set s3 file upload](https://oneislam.pro/) This middleware is designed to reduce redundant code for Node/Express.js developers. It easily handles S3 file uploads, taking a few arguments as functions and returning the file locations. Simply specify the file field names and upload sizes, then use it as middleware.
+
+## Update logs:
+* Develop a middleware for `uploading files to S3`.
+* Enable `search` functionality.
+* Set the default `page size` to 50.
+* Add support for custom `middlewares`.
+* Enable S3 file uploads via `.env` configuration.
+
+## Features
+- Dynamically handles multiple file fields.
+- Supports single or multiple file uploads with customizable paths.
+- Reduces redundant code by providing reusable middleware for S3 file uploads.
 
 ## Documentation
 
 The official documentation website is [controllerSets](https://oneislam.pro/).
 
-controllerSets 1.0.1 was released on Oct 2024. You can find more details on [backwards breaking changes in 1.0.0 on our docs site](https://oneislam.pro/). 
-
+controllerSets 1.0.0 was released on May 2023. You can find more details on [backwards breaking changes in 1.0.0 on our docs site](https://oneislam.pro/). 
 
 ## Installation
 * dependencies
@@ -17,10 +32,22 @@ controllerSets 1.0.1 was released on Oct 2024. You can find more details on [bac
     * [controller-sets-s3-file-upload]("https://www.npmjs.com/package/controller-sets-s3-file-upload")
 
 ```sh
-$ npm i controller-sets-s3-file-upload
+$ npm i multer multer-s3 @aws-sdk/client-s3  controller-sets-s3-file-upload
 ```
 
 ## Using middleware with [ControllerSets]("https://www.npmjs.com/package/express-controller-sets")
+
+## Config .env file
+```env
+
+<!-- S3 secrets -->
+S3_ENDPOINT="s3.Aws"
+S3_SPACES_KEY="s3.key"
+S3_SPACES_SECRET="s3.Secret"
+S3_BUCKET_NAME="s3.Name"
+S3_REGION="s3.Region" <!-- default = us-east-1 -->
+
+```
 
 ```javascript
 
@@ -88,7 +115,7 @@ app.post("/upload",
 
 ## License
 
-Copyright (c) 2023 LearnBoost &lt;https://oneislam.pro/&gt;
+Copyright (c) 2025 Learn &lt;https://oneislam.pro/&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

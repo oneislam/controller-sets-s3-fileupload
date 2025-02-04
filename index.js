@@ -8,7 +8,7 @@ dotenv.config();
 const s3Client = new S3Client({
     endpoint: process.env.S3_ENDPOINT,
     forcePathStyle: true,
-    region: "us-east-1",
+    region: process.env.S3_REGION || "us-east-1",
     credentials: {
         accessKeyId: process.env.S3_SPACES_KEY,
         secretAccessKey: process.env.S3_SPACES_SECRET,
@@ -45,11 +45,8 @@ const fileUploadMiddleware = (
                 console.error("Error uploading file:", error);
                 return res.status(500).json({ error: "Failed to upload file" });
             }
-
-            req.body[fields[0].name] = req.file.location; // Store the uploaded file URL in req.body
-            console.log("inside middleware -->", req.body);
-
-            next(); // Call next middleware or route handler
+            req.body[fields[0].name] = req.file.location;
+            next();
         });
     } else {
         // Multiple file upload
